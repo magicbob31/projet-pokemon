@@ -1,0 +1,49 @@
+@mixin mq($breakpoint: 768px) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.tête {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-image: url("../assets/imgs/OIG3_2.jpg");
+  min-width: 375px;
+  min-height: 810px;
+  background-size: 100% 100%;
+  @include mq {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../assets/imgs/OIG3_2.jpg");
+    background-size: 100% 100%;
+    min-height: 1024px;
+    min-width: 1024px;
+  }
+
+  .H1 {
+    background-color: black;
+
+    border: solid;
+    border-color: rgb(79, 63, 63);
+    max-height: 36px;
+    font-weight: bolder;
+    font-size: 32px;
+    color: red;
+  }
+  .corp {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-around;
+    button {
+      font-weight: bolder;
+      background-color: black;
+      color: red;
+      border-radius: 20px;
+      height: 40px;
+      width: 150px;
+    }
+  }
+}

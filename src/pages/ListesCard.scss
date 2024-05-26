@@ -1,0 +1,57 @@
+@mixin mq($breakpoint: 768px) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+.all {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  .navbar {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    button {
+      @include mq() {
+        width: 120px;
+      }
+      width: 160px;
+      margin-left: 10px;
+      border-radius: 20px;
+      background-color: black;
+      color: bisque;
+    }
+    input {
+      @include mq() {
+        width: auto;
+      }
+      height: 30px;
+      width: 300px;
+      text-align: center;
+      border-radius: 20px;
+    }
+  }
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 10px;
+  button {
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: black;
+    color: bisque;
+  }
+}
